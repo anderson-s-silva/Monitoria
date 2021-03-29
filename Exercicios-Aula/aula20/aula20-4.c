@@ -22,8 +22,8 @@ int comparaIdade(const void * a, const void * b){
     return 0;
   else if(r < 0)
     return -1;
-  else
-    return 1;
+    else
+      return 1;
 }
 int comparaAltura(const void * a, const void * b){
   int r = strcmp((*(atletas *)a).altura, (*(atletas *)b).altura);
@@ -31,14 +31,12 @@ int comparaAltura(const void * a, const void * b){
     return 0;
   else if(r < 0)
     return -1;
-  else
-    return 1;
+    else
+      return 1;
 }
 
 int main(int argc, char const *argv[]) {
   atletas atleta[5];
-  atletas mais_velho[5];
-  atletas mais_alto[5];
   FILE *entrada;
   entrada = fopen("saida.dat", "rb");
   if(entrada == NULL)
@@ -50,10 +48,10 @@ int main(int argc, char const *argv[]) {
       fgets(atleta[i].idade, sizeof(atleta[i].idade), entrada);
       fgets(atleta[i].altura, sizeof(atleta[i].altura), entrada);
     }
-    mais_velho = qsort(atleta, 5, sizeof(atletas), comparaIdade);
-    mais_alto = qsort(atleta, 5, sizeof(atletas), comparaAltura);
-    printf("Mais velho:%s\n",mais_velho[5].nome);
-    printf("Mais alto:%s\n",mais_alto[5].nome);
+    qsort(atleta, 5, sizeof(atletas), comparaIdade);
+    printf("Mais velho: %s\n", atleta[4].nome);
+    qsort(atleta, 5, sizeof(atletas), comparaAltura);
+    printf("Mais alto: %s\n", atleta[4].nome);
     fclose(entrada);
   }
   return 0;
