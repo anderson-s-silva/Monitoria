@@ -20,28 +20,26 @@ int main(int argc, char const *argv[]) {
   FILE *entrada;
   FILE *saida;
   entrada = fopen("atletas.txt", "r");
-  saida = fopen("saida.dat", "a");
+  saida = fopen("saida.dat", "ab");
   if(entrada == NULL)
     printf("Erro ao abrir o arquivo\n");
   else{
     for(int i = 0; i < 5; i++){
       fgets(atleta[i].nome, sizeof(atleta[i].nome), entrada);
-      fprintf(saida, "%s\n", atleta[i].nome);
+      fprintf(saida, "%s", atleta[i].nome);
       printf("%s", atleta[i].nome);
       fgets(atleta[i].esporte, sizeof(atleta[i].esporte), entrada);
-      fprintf(saida, "%s\n", atleta[i].esporte);
+      fprintf(saida, "%s", atleta[i].esporte);
       printf("%s", atleta[i].esporte);
       fgets(atleta[i].idade, sizeof(atleta[i].idade), entrada);
-      fprintf(saida, "%d\n", atleta[i].idade);
+      fprintf(saida, "%s", atleta[i].idade);
       printf("%s", atleta[i].idade);
       fgets(atleta[i].altura, sizeof(atleta[i].altura), entrada);
-      fprintf(saida, "%d\n\n", atleta[i].idade);
+      fprintf(saida, "%s", atleta[i].altura);
       printf("%s\n", atleta[i].altura);
     }
     fclose(entrada);
     fclose(saida);
-
-
   }
   return 0;
 }
