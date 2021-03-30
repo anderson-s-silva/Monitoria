@@ -38,15 +38,15 @@ int comparaAltura(const void * a, const void * b){
 int main(int argc, char const *argv[]) {
   atletas atleta[5];
   FILE *entrada;
-  entrada = fopen("saida.dat", "rb");
+  entrada = fopen("saida.txt", "rb");
   if(entrada == NULL)
     printf("Erro ao abrir o arquivo\n");
   else{
     for(int i = 0; i < 5; i++){
-      fread(&atleta[i].nome, sizeof(atletas),50,entrada);
-      fread(&atleta[i].esporte, sizeof(atletas),50,entrada);
-      fread(&atleta[i].idade, sizeof(atletas),50,entrada);
-      fread(&atleta[i].altura, sizeof(atletas),50,entrada);
+      fgets(atleta[i].nome, sizeof(atleta[i].nome), entrada);
+      fgets(atleta[i].esporte, sizeof(atleta[i].esporte), entrada);
+      fgets(atleta[i].idade, sizeof(atleta[i].idade), entrada);
+      fgets(atleta[i].altura, sizeof(atleta[i].altura), entrada);
     }
     qsort(atleta, 5, sizeof(atletas), comparaIdade);
     printf("Mais velho: %s\n", atleta[4].nome);
