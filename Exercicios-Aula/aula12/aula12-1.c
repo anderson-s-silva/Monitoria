@@ -4,7 +4,7 @@
 * @date 28 Mar 2021
 * @brief  exercicio 1 aula 12
 */
-
+// @Muriel: Deixar o enunciado como comentário no inicio
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,9 +17,9 @@ int main(){
       else
         matriz[l][c] = 0;
       printf("[%d]", matriz[l][c]);
-    }
+    }//for coluna
     printf("\n");
-  }
+  }//for linha
 
   return 0;
 }

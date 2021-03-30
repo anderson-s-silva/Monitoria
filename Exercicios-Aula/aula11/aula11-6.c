@@ -22,9 +22,10 @@ int main(){
   for(int i = 0; i < 20; i++){
     if(vetorA[i] > media)
       cont_maiormedia++;
-    if(vetorA[i] < media)
+    if(vetorA[i] < media)//@Muriel: item c é conta iguais a média
       cont_menormedia++;
-  }
+  }//for melhorar comentários nos exercicio em geral
   printf("numeros iguais a 30 [%d]\nnumeros menores que a media [%d]\nnumeros maiores que a media [%d]\n", cont_trinta, cont_menormedia, cont_maiormedia);
+  //@Muriel: Quebre em 3 printf, fica mais organizado
   return 0;
-}
+}//main

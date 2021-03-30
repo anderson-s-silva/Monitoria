@@ -4,7 +4,7 @@
 * @date 28 Mar 2021
 * @brief  exercicio 3 aula 11
 */
-
+// @Muriel: Deixar o enunciado como comentário no inicio
 #include <stdio.h>
 #include <stdlib.h>
 

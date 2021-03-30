@@ -4,6 +4,7 @@
 * @date 28 Mar 2021
 * @brief  exercicio 1 aula 11
 */
+// @Muriel: Deixar o enunciado como comentário no inicio
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,5 +24,6 @@ int main(int argc, char const *argv[]) {
   for (int i = 0; i < 5; i++) {
     printf("[%d] ", vetor1[i]+vetor2[i]);
   }
+  // @Muriel: Você não criou o vetor soma, apenas exibiu a soma do indice
   return 0;
 }
