@@ -26,16 +26,16 @@ int main(int argc, char const *argv[]) {
   else{
     for(int i = 0; i < 5; i++){
       fgets(atleta[i].nome, sizeof(atleta[i].nome), entrada);
-      fprintf(saida, "%s", atleta[i].nome);
+      fwrite(atleta[i].nome, sizeof(atleta[i].nome),50,saida);
       printf("%s", atleta[i].nome);
-      fgets(atleta[i].esporte, sizeof(atleta[i].esporte), entrada);
-      fprintf(saida, "%s", atleta[i].esporte);
+      fgets(atleta[i].esporte, sizeof(atleta[i].esporte),entrada);
+      fwrite(atleta[i].esporte, sizeof(atleta[i].esporte),50,saida);
       printf("%s", atleta[i].esporte);
-      fgets(atleta[i].idade, sizeof(atleta[i].idade), entrada);
-      fprintf(saida, "%s", atleta[i].idade);
+      fgets(atleta[i].idade, sizeof(atleta[i].idade),entrada);
+      fwrite(atleta[i].idade, sizeof(atleta[i].idade),50,saida);
       printf("%s", atleta[i].idade);
-      fgets(atleta[i].altura, sizeof(atleta[i].altura), entrada);
-      fprintf(saida, "%s", atleta[i].altura);
+      fgets(atleta[i].altura, sizeof(atleta[i].altura),entrada);
+      fwrite(atleta[i].altura,sizeof(atleta[i].altura),50,saida);
       printf("%s\n", atleta[i].altura);
     }
     fclose(entrada);
