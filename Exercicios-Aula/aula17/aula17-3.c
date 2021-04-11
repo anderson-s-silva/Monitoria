@@ -46,7 +46,7 @@ void exibeEstilo(Bandas* grupo){
   tipo[strcspn(tipo,"\n")]='\0';
   setbuf(stdin, NULL);
   for(int i = 0; i < 5; i++){
-    if(grupo[i].estilo == tipo){
+    if(strcmp(grupo[i].estilo, tipo) == 0){
       printf("Banda #%d\nNome:%s", i, grupo[i].nome);
     }
   }
@@ -60,7 +60,7 @@ void verificaNome(Bandas* grupo){
   int aux = 0;
   nome[strcspn(nome,"\n")]='\0';
   for(int i = 0; i < 5; i++){
-    if(grupo[i].nome == nome){
+    if(strcmp(grupo[i].nome, nome) == 0){
       printf("Banda #%d\nNome:%s", i, grupo[i].nome);
       aux = 1;
     }
